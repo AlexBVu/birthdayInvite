@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>You're Invited!</title>
+        <link rel="icon" type="image/png" href="empty.jpg">
+    </head>
+
+    <body id="body-container">
+
+        <div id="envelope-container">
+            <img src="file:///C:/Users/alexv/Downloads/IMG_3732.JPG" alt="Open the envelope!" id="envelope">
+        </div>
+
+        <div id="popup" style="display:none;">
+            <div id="popup-content">
+                <span id="close-popup">&times;</span>
+
+                <h2 text-align: center>You are invited to your own birthday party!</h2>
+
+                <p>What should I pack?</p>
+                <div text-align: center>
+                    <ul>
+                        <li>During the day --> clothes for exploring the city and </li>
+                        <li>For dinner --> Normal date night clothes are pefect </li>
+                        <li>At night --> What would you wear to dance and look 21+?</li>
+                        <i>And all the other classic sleepover materials!</i>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <script>
+        document.getElementById('envelope-container').onclick = function() {
+            document.getElementById('popup').style.display = 'flex';
+        };
+        document.getElementById('close-popup').onclick = function(event) {
+            document.getElementById('popup').style.display = 'none';
+            event.stopPropagation();
+        };
+        document.getElementById('popup').onclick = function(event) {
+            if(event.target === this) {
+                this.style.display = 'none';
+            }
+        };
+    </script>
+    </body>
+
+</html>
